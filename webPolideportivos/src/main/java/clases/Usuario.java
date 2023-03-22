@@ -4,6 +4,7 @@ public class Usuario {
 
 	int id;
 	String nombre;
+	String contrasena;
 	
 	
 	public int getId() {
