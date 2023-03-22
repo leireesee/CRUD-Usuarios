@@ -56,6 +56,10 @@
 				<td><%=usuario.getNombre()%></td>
 				<td><%=usuario.getContrasena()%></td>
 				<td>
+					<button type="button" class="btn btn-secondary">
+						<a style="color: white; text-decoration: none"
+							href="ControladorVerUnUsuario?id=<%=usuario.getId()%>">Ver</a>
+					</button>
 					<button type="button" class="btn btn-success">
 						<a style="color: white; text-decoration: none"
 							href="ControladorModificarUsuario?id=<%=usuario.getId()%>">Modificar</a>
