@@ -17,6 +17,9 @@
 	  <div class="mb-3">
 	    <label for="exampleInputName" class="form-label">Nombre</label>
 	    <input type="text" class="form-control" id="exampleInputName" aria-describedby="name" name="nombre">
+	    <br>
+	    <label for="exampleInputName" class="form-label">Contraseña</label>
+	    <input type="text" class="form-control" id="exampleInputName" aria-describedby="name" name="contrasena">
 	  </div>
 	  
 	  <button type="submit" class="btn btn-primary"><a style="color:white; text-decoration:none">Submit</a></button>
