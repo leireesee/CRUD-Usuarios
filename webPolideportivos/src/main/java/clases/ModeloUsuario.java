@@ -29,7 +29,7 @@ public class ModeloUsuario extends Conector {
 					
 					usuario.setId(rst.getInt("id"));
 					usuario.setNombre(rst.getString("nombre_apellido"));
-					usuario.setNombre(rst.getString("contrasena"));
+					usuario.setContrasena(rst.getString("contrasena"));
 					
 					usuarios.add(usuario);
 					
