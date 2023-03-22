@@ -29,7 +29,7 @@ public class ModeloUsuario extends Conector {
 					
 					usuario.setId(rst.getInt("id"));
 					usuario.setNombre(rst.getString("nombre_apellido"));
-					
+					usuario.setNombre(rst.getString("contrasena"));
 					
 					usuarios.add(usuario);
 					
@@ -64,6 +64,7 @@ public class ModeloUsuario extends Conector {
 			
 			usuario.setId(rst.getInt("id"));
 			usuario.setNombre(rst.getString("nombre_apellido"));
+			usuario.setNombre(rst.getString("contrasena"));
 			
 			return usuario;
 			
@@ -100,12 +101,13 @@ public class ModeloUsuario extends Conector {
 	//INSERTAR USUARIO
 	public void insertarUsuario(Usuario usuario) {
 		
-		String sentenciaInsertarUsuario = "INSERT INTO usuarios (nombre_apellido) VALUES (?)";
+		String sentenciaInsertarUsuario = "INSERT INTO usuarios (nombre_apellido, contrasena) VALUES (?, ?)";
 		
 		try {
 			PreparedStatement st = this.conexion.prepareStatement(sentenciaInsertarUsuario);
 			
 			st.setString(1, usuario.getNombre());
+			st.setString(1, usuario.getContrasena());
 			
 			st.execute();
 			
@@ -120,13 +122,14 @@ public class ModeloUsuario extends Conector {
 	//MODIFICAR USUARIO
 	public void modificarUsuario(Usuario usuario) {
 		
-		String sentenciaModificarUsuario = "UPDATE usuarios SET nombre_apellido = ? WHERE id = ?";
+		String sentenciaModificarUsuario = "UPDATE usuarios SET nombre_apellido = ?, contrasena = ? WHERE id = ?";
 		
 		try {
 			PreparedStatement st = this.conexion.prepareStatement(sentenciaModificarUsuario);
 			
 			st.setString(1, usuario.getNombre());
-			st.setInt(2, usuario.getId());
+			st.setString(1, usuario.getContrasena());
+			st.setInt(3, usuario.getId());
 			
 			st.executeUpdate();
 			

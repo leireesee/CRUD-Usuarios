@@ -7,6 +7,12 @@ public class Usuario {
 	String contrasena;
 	
 	
+	public String getContrasena() {
+		return contrasena;
+	}
+	public void setContrasena(String contrasena) {
+		this.contrasena = contrasena;
+	}
 	public int getId() {
 		return id;
 	}
