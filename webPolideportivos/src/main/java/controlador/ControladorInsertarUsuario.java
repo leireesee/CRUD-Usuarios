@@ -42,6 +42,7 @@ public class ControladorInsertarUsuario extends HttpServlet {
 		Usuario usuario = new Usuario();
 		
 		usuario.setNombre(request.getParameter("nombre"));
+		usuario.setNombre(request.getParameter("contrasena"));
 				
 		bbdd.insertarUsuario(usuario);
 		

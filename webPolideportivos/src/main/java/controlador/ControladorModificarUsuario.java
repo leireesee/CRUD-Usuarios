@@ -54,6 +54,7 @@ public class ControladorModificarUsuario extends HttpServlet {
 		
 		usuario.setNombre(request.getParameter("nombre"));
 		usuario.setId(Integer.parseInt(request.getParameter("id")));
+		usuario.setNombre(request.getParameter("contrasena"));
 				
 		bbdd.modificarUsuario(usuario);
 		
