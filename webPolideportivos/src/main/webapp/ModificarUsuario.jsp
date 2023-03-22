@@ -23,7 +23,7 @@
 	    <input type="text" value="<%=usuario.getNombre()%>" class="form-control" id="exampleInputName" aria-describedby="name" name="nombre">
 	    <br>
 	    <label for="exampleInputName" class="form-label">Contraseña</label>
-	    <input type="text" value="<%=usuario.getNombre()%>" class="form-control" id="exampleInputName" aria-describedby="name" name="contrasena">
+	    <input type="text" value="<%=usuario.getContrasena()%>" class="form-control" id="exampleInputName" aria-describedby="name" name="contrasena">
 	  </div>
 	  
 	  <button type="submit" class="btn btn-primary"><a style="color:white; text-decoration:none">Submit</a></button>

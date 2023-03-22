@@ -34,9 +34,10 @@ public class ControladorVerUsuarios extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		ModeloUsuario bbdd = new ModeloUsuario();
-		ArrayList<Usuario> usuarios = null;
-				
-		usuarios = bbdd.getUsuarios();
+		
+		ArrayList<Usuario> usuarios = bbdd.getUsuarios();
+		
+		System.out.println(usuarios);
 		
 		request.setAttribute("usuarios", usuarios);
 		

@@ -64,7 +64,7 @@ public class ModeloUsuario extends Conector {
 			
 			usuario.setId(rst.getInt("id"));
 			usuario.setNombre(rst.getString("nombre_apellido"));
-			usuario.setNombre(rst.getString("contrasena"));
+			usuario.setContrasena(rst.getString("contrasena"));
 			
 			return usuario;
 			
@@ -107,7 +107,7 @@ public class ModeloUsuario extends Conector {
 			PreparedStatement st = this.conexion.prepareStatement(sentenciaInsertarUsuario);
 			
 			st.setString(1, usuario.getNombre());
-			st.setString(1, usuario.getContrasena());
+			st.setString(2, usuario.getContrasena());
 			
 			st.execute();
 			
@@ -128,7 +128,7 @@ public class ModeloUsuario extends Conector {
 			PreparedStatement st = this.conexion.prepareStatement(sentenciaModificarUsuario);
 			
 			st.setString(1, usuario.getNombre());
-			st.setString(1, usuario.getContrasena());
+			st.setString(2, usuario.getContrasena());
 			st.setInt(3, usuario.getId());
 			
 			st.executeUpdate();
